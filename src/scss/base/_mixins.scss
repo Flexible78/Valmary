@@ -1,0 +1,13 @@
+@import "media-templates";
+
+@mixin focus($width: 4px, $offset: 2px, $radius: none, $color: #b25200) {
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: $width solid $color;
+    outline-offset: $offset;
+    border-radius: $radius;
+  }
+}

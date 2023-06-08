@@ -1,0 +1,79 @@
+// Desctop first
+
+@mixin max1440 {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin max1280 {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin max1024 {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin max834 {
+  @media (max-width: 834px) {
+    @content;
+  }
+}
+
+@mixin max810 {
+  @media (max-width: 810px) {
+    @content;
+  }
+}
+
+@mixin max768 {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin max600 {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin max428 {
+  @media (max-width: 428px) {
+    @content;
+  }
+}
+
+@mixin max414 {
+  @media (max-width: 414px) {
+    @content;
+  }
+}
+
+@mixin max390 {
+  @media (max-width: 390px) {
+    @content;
+  }
+}
+
+@mixin max375 {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin max360 {
+  @media (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin max320 {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
