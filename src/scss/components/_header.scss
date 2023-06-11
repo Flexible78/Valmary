@@ -1,4 +1,5 @@
 .header {
+  padding-top: 12px;
 }
 
 .header-container {
@@ -7,13 +8,15 @@
 .header__main-line {
   display: flex;
   align-items: flex-start;
+  margin-bottom: 34px;
   //justify-content: space-between;
 }
 
 .logo {
   display: flex;
+  margin: 5px 326px 0px 0px;
   column-gap: 11.07px;
-  max-width: 425px;
+  max-width: 326px;
   align-items: center;
 }
 
@@ -31,17 +34,20 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 1.55;
+  font-size: 11px;
+  line-height: 1.25;
   color: #1C1E23;
   //opacity: 0.8;
 }
+
 .header__action-group {
   display: flex;
   justify-content: space-between;
 }
+
 .header__phone {
   display: flex;
+  margin: 0 258px 0 0;
   column-gap: 22px;
   align-items: center;
 }
@@ -76,6 +82,7 @@
 }
 
 .header__lng-selector {
+  margin: 0 0 0 36px;
 }
 
 .lng-selector {
