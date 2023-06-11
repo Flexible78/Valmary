@@ -1,48 +1,56 @@
 <header class="header">
     <div class="container header-container">
-        <div class="header__upper-block firm-info">
-            <div class="logo-block">
-                <a class="logo-block__link" href="index.html">
-                    <img class="logo-block__img" src="/src/img/png/logo.png" />
+        <div class="header__main-line">
+            <div class="logo">
+                <a class="logo__link" href="index.html">
+                    <img alt="Valmari" class="logo__img" src="./img/png/logo.png"/>
                 </a>
-                <span class="logo-block__text">Учебный центр эстетической косметологии</span>
+                <span class="logo__text">Учебный центр эстетической косметологии</span>
             </div>
-            <div class="firm-info__phone">
-                <a class="firm-info__phone--link" href="">
-                    <svg class="firm-info__phone--icon">
-                        <use href="/src/img/svg/svg-sprite.svg#ic-phone"></use>
+            <div class="header__action-group">
+                    <a class="header__phone" href="tel:+0800508622">
+                        <svg class="header__phone--img">
+                            <use href="./img/svg/sprite.svg#ic-phone"></use>
+                        </svg>
+                        <span class="header__phone--tex">0 (800) 508-622</span>
+                    </a>
+                <ul class="header__social social">
+                    <li class="social__item">
+                        <a class="social__link" href="https://www.facebook.com/">
+                            <svg>
+                                <use href="./img/svg/sprite.svg#ic-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link" href="https://www.instagram.com/">
+                            <svg>
+                                <use href="./img/svg/sprite.svg#ic-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <button class="header__lng-selector lng-selector">
+                    <svg>
+                        <use href="./img/svg/sprite.svg#ic-rf"></use>
                     </svg>
-                </a>
+                </button>
             </div>
-            <ul class="firm-info__social social-list">
-                <li class="social-list__item">
-                    <a class="social-list__link" href="">
-                        <svg class="social-list__icon">
-                            <use href="/src/img/svg/svg-sprite.svg#ic-facebook"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="">
-                        <svg class="social-list__icon">
-                            <use href="/src/img/svg/svg-sprite.svg#ic-instagram"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
         </div>
-        <nav class="menu">
-            <ul class="menu__list">
-                <li><a class="menu__link" href="#">Курсы обучения</a></li>
-                <li><a class="menu__link" href="#">Вебинары</a></li>
-                <li><a class="menu__link" href="#">Видео-уроки</a></li>
-                <li><a class="menu__link" href="#">Блог</a>
-                <li><a class="menu__link" href="#">О нас</a></li>
-                <li><a class="menu__link" href="#">Прайс</a></li>
-                <li><a class="menu__link" href="#">Расписание</a></li>
-                <li><a class="menu__link" href="#">Акции</a></li>
-                <li><a class="menu__link" href="#">Магазин</a></li>
-            </ul>
-        </nav>
+        <div class="header__secondary-line">
+            <nav class="header__menu menu">
+                <ul class="menu__list">
+                    <li><a class="menu__link" href="#">Курсы обучения</a></li>
+                    <li><a class="menu__link" href="#">Вебинары</a></li>
+                    <li><a class="menu__link" href="#">Видео-уроки</a></li>
+                    <li><a class="menu__link" href="#">Блог</a></li>
+                    <li><a class="menu__link" href="#">О нас</a></li>
+                    <li><a class="menu__link" href="#">Прайс</a></li>
+                    <li><a class="menu__link" href="#">Расписание</a></li>
+                    <li><a class="menu__link" href="#">Акции</a></li>
+                    <li><a class="menu__link" href="#">Магазин</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </header>
