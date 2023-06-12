@@ -1,5 +1,6 @@
 .header {
-  padding-top: 12px;
+  padding-left: 3px;
+  padding-top: 7px;
 }
 
 .header-container {
@@ -35,7 +36,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
-  line-height: 1.25;
+  letter-spacing: -0.6px;
   color: #1C1E23;
   //opacity: 0.8;
 }
@@ -47,9 +48,10 @@
 
 .header__phone {
   display: flex;
-  margin: 0 258px 0 0;
+  margin: 15px 78.9px 0 106.6px;
   column-gap: 22px;
   align-items: center;
+
 }
 
 .header__phone--text {
@@ -65,14 +67,16 @@
   width: 28px;
   height: 28px;
   fill: #55A630;
+  @include max768 {
+    width: 11px;
+  }
 }
 
 .social {
   display: flex;
   column-gap: 26px;
-  align-items: center;
-  //max-width: 83px;
-
+  align-items: flex-end;
+  padding-top: 20px;
 }
 
 .social__link {
@@ -86,7 +90,8 @@
 }
 
 .lng-selector {
-  height: 27.1864px;
+  margin: 14.2px 0 0 66px;
+  height: 41.4375px;
   width: 41.4375px;
 }
 
@@ -103,9 +108,7 @@
 .menu__list {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
-
-  //justify-content: start;
+  justify-content: space-between;
   align-items: center;
   gap: 57px;
 }
