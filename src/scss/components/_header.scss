@@ -1,6 +1,17 @@
 .header {
   padding-left: 3px;
-  padding-top: 7px;
+  padding-top: 12px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 83.6px;
+    left: 0;
+    content: '';
+    display: block;
+    width: 100vw;
+    border: 1px solid rgba(85, 166, 48, 0.5);
+  }
 }
 
 .header-container {
@@ -8,14 +19,13 @@
 
 .header__main-line {
   display: flex;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 34px;
-  //justify-content: space-between;
 }
 
 .logo {
   display: flex;
-  margin: 5px 326px 0px 0px;
   column-gap: 11.07px;
   max-width: 326px;
   align-items: center;
@@ -32,35 +42,32 @@
 }
 
 .logo__text {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
   letter-spacing: -0.6px;
-  color: #1C1E23;
-  //opacity: 0.8;
+  color: rgba($color: #1C1E23, $alpha: 80%);
 }
 
 .header__action-group {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 45%;
 }
 
 .header__phone {
   display: flex;
-  margin: 15px 78.9px 0 106.6px;
   column-gap: 22px;
   align-items: center;
 
 }
 
 .header__phone--text {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
   line-height: 1.04;
-  color: #424242;
 }
 
 .header__phone--img {
@@ -72,11 +79,14 @@
   }
 }
 
+.header__social {
+  margin-left: 47px;
+}
+
 .social {
   display: flex;
   column-gap: 26px;
   align-items: flex-end;
-  padding-top: 20px;
 }
 
 .social__link {
@@ -86,13 +96,30 @@
 }
 
 .header__lng-selector {
-  margin: 0 0 0 36px;
+  position: relative;
+  margin: 0 27px 0 0;
+  &::after {
+    content: '';
+    position: absolute;
+    height: 6.27px;
+    width: 11px;
+    background-image: url("./img/svg/ic-drop-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 12px;
+    right: 25px;
+    background-position: 50% 50%;
+  }
 }
 
 .lng-selector {
-  margin: 14.2px 0 0 66px;
-  height: 41.4375px;
-  width: 41.4375px;
+  height: 27px;
+  width: 41px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .header__secondary-line {
@@ -114,10 +141,8 @@
 }
 
 .menu__link {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
-  color: #424242;
 }
