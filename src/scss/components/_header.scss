@@ -100,12 +100,12 @@
   display: flex;
   column-gap: var(--gap);
 
-  a {
+  .social__link {
     @include focus;
 
     width: var(--icon-size);
     height: var(--icon-size);
-    fill: var(--color);
+    color: var(--color);
 
     svg {
       width: 100%;
