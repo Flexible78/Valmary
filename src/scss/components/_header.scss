@@ -1,16 +1,18 @@
 .header {
-  padding-left: 3px;
-  padding-top: 12px;
+  padding: 1.2rem 0 1.9rem;
   position: relative;
 
   &::after {
     position: absolute;
-    top: 83.6px;
+    top: 55%;
     left: 0;
     content: '';
-    display: block;
     width: 100vw;
-    border: 1px solid rgba(85, 166, 48, 0.5);
+    background-color: rgba($color: #55a630, $alpha: 50%);
+    height: 1px;
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
 }
 
@@ -23,12 +25,15 @@
   align-items: center;
   margin-bottom: 34px;
 }
-
 .logo {
+  --size: 6.2rem;
+
   display: flex;
   column-gap: 11.07px;
   max-width: 326px;
   align-items: center;
+  @include focus;
+
 }
 
 .logo__link {
@@ -37,8 +42,8 @@
 .logo__img {
   object-fit: cover;
   object-position: center;
-  width: 61.21px;
-  height: 62px;
+  width: var(--size);
+  height: var(--size);
 }
 
 .logo__text {
@@ -47,6 +52,9 @@
   font-size: 11px;
   letter-spacing: -0.6px;
   color: rgba($color: #1C1E23, $alpha: 80%);
+  @media (max-width: 1000px) {
+  display: none;
+  }
 }
 
 .header__action-group {
@@ -74,7 +82,7 @@
   width: 28px;
   height: 28px;
   fill: #55A630;
-  @include max768 {
+  @include max768 { //it`s sample
     width: 11px;
   }
 }
@@ -84,48 +92,55 @@
 }
 
 .social {
-  display: flex;
-  column-gap: 26px;
-}
+  --icon-size: 2.8rem;
+  --gap: 2.6rem;
+  --color: var(--primary-color);
 
-.social__link {
-  width: 28px;
-  height: 28px;
-  fill: #55A630;
+  display: flex;
+  column-gap: var(--gap);
+
+a {
+  @include focus;
+
+  width: var(--icon-size);
+  height: var(--icon-size);
+  fill: var(--color);
+svg{
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  fill: currentColor;
+  object-fit: cover;
+}
+}
 }
 
 .header__lng-selector {
   position: relative;
-  margin: 0 27px 0 0;
-  &::after {
-    content: "";
-    position: absolute;
-    height: 6.27px;
-    width: 11px;
-    background-image: url("./img/ic-drop-arrow.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    top: 12px;
-    right: 25px;
-    background-position: 50% 50%;
-  }
 }
 
 .lng-selector {
-  height: 27px;
-  width: 41px;
-  img {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  column-gap: 1.4rem;
+  color: var(--primary-color);
+}
+  .lng-selector__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  &__icon {
+
+
+  .lng-selector__icon {
     display: block;
     width: 11px;
     height: 6.27px;
     margin-top: 12px;
     color: var(--primary-color);
-    svg{
+
+    svg {
       width: 100%;
       height: 100%;
       color: inherit;
@@ -133,7 +148,7 @@
       object-fit: cover;
     }
   }
-}
+
 
 
 .header__secondary-line {
