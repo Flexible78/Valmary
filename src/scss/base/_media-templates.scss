@@ -1,5 +1,5 @@
 // Desktop first
-
+//calc(min-Value-with-Units + (max-Value-No-Units - min-Value-No-Units) * ((100vw - min-Resolution-px) / (maxResolution-not-units - minResolution-not-units)))
 @mixin max1440 {
   @media (max-width: 1440px) {
     @content;
@@ -12,8 +12,8 @@
   }
 }
 
-@mixin max1024 {
-  @media (max-width: 1024px) {
+@mixin max1000 {
+  @media (max-width: 1000px) {
     @content;
   }
 }

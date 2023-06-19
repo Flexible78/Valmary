@@ -1,6 +1,7 @@
 .header {
-  padding: 1.2rem 0 1.9rem;
+  padding: 1.2rem 0 1.9rem; // add 1.2rem 0 1.9rem 0.7rem
   position: relative;
+  background-color: var(--color-white);
 
   &::after {
     position: absolute;
@@ -10,102 +11,135 @@
     width: 100vw;
     background-color: rgba($color: #55a630, $alpha: 50%);
     height: 1px;
-    @media (max-width: 1000px) {
+    @include max1000 {
       display: none;
     }
   }
 }
+  .header-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 32px;
 
-.header-container {
-}
-
-.header__main-line {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 34px;
-}
-
-.logo {
-  --size: 6.2rem;
-
-  display: flex;
-  column-gap: 11.07px;
-  max-width: 326px;
-  align-items: center;
-  @include focus;
-
-}
-
-.logo__link {
-}
-
-.logo__img {
-  object-fit: cover;
-  object-position: center;
-  width: var(--size);
-  height: var(--size);
-}
-
-.logo__text {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 11px;
-  letter-spacing: -0.6px;
-  color: rgba($color: #1C1E23, $alpha: 80%);
-  @media (max-width: 1000px) {
-    display: none;
+    @include max1000 {
+      align-items: center;
+      row-gap: inherit;
+    }
+    @include max1000 {
+      align-items: center;
+      row-gap: inherit;
+    }
   }
+.burger-btn {
+  display: none;
 }
-
-.header__action-group {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 45%;
-}
-
-.header__phone {
-  display: flex;
-  column-gap: 22px;
-  align-items: center;
-
-}
-
-.header__phone--text {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 25px;
-  line-height: 1.04;
-}
-
-.header__phone--img {
-  width: 28px;
-  height: 28px;
-  fill: #55A630;
-  @include max768 { //it`s sample
-    width: 11px;
+  .logo {
+    @include focus;
+    display: flex;
+    grid-column: 6 span;
+    justify-self: center;
+    @include max1000 {
+      justify-self: center;
+      grid-column: 2 span;
+    }
   }
-}
 
-.header__social {
-  transform: translateX(5px);
-}
+  .logo__img {
+    object-fit: cover;
+    object-position: center;
+    width: var(--size);
+    height: var(--size);
+  }
 
-.social {
-  --icon-size: 2.8rem;
-  --gap: 2.6rem;
-  --color: var(--primary-color);
+  .logo__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: -0.6px;
+    color: rgba($color: #1C1E23, $alpha: 80%);
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
 
-  display: flex;
-  column-gap: var(--gap);
 
-  .social__link {
+  .header__phone {
+    display: flex;
+    column-gap: 22px;
+    align-items: center;
+    grid-column: 3 span;
+
+    img {
+      display: block;
+      width: 28px;
+      height: 28px;
+      fill: #55A630;
+      @include max1000 {
+        display: none;
+      }
+    }
+  }
+
+  .header__phone--text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.04;
+  }
+
+  .header__social {
+    transform: translateX(5px);
+  }
+
+  .social {
+    --icon-size: 2.8rem;
+    --gap: 2.6rem;
+    --color: var(--primary-color);
+
+    display: flex;
+    column-gap: var(--gap);
+
+    .social__link {
+      @include focus;
+
+      width: var(--icon-size);
+      height: var(--icon-size);
+      color: var(--color);
+
+      svg {
+        width: 100%;
+        height: 100%;
+        color: inherit;
+        fill: currentColor;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .lng-selector {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    column-gap: 1.4rem;
+    color: var(--primary-color);
+
     @include focus;
 
-    width: var(--icon-size);
-    height: var(--icon-size);
-    color: var(--color);
+  }
+
+  .lng-selector__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  .lng-selector__icon {
+    display: block;
+    width: 11px;
+    height: 6.27px;
+    margin-top: 12px;
+    color: var(--primary-color);
 
     svg {
       width: 100%;
@@ -115,61 +149,26 @@
       object-fit: cover;
     }
   }
-}
-
-.lng-selector {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  column-gap: 1.4rem;
-  color: var(--primary-color);
-
-  @include focus;
-
-}
-
-.lng-selector__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 
-.lng-selector__icon {
-  display: block;
-  width: 11px;
-  height: 6.27px;
-  margin-top: 12px;
-  color: var(--primary-color);
-
-  svg {
-    width: 100%;
-    height: 100%;
-    color: inherit;
-    fill: currentColor;
-    object-fit: cover;
+  .header__secondary-line {
   }
-}
 
+  .header__menu {
 
-.header__secondary-line {
-}
+  }
 
-.header__menu {
+  .menu {
+  }
 
-}
+  .menu__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.menu {
-}
-
-.menu__list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu__link {
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.62;
-}
+  .menu__link {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.62;
+  }
