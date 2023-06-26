@@ -1,0 +1,34 @@
+.burger-btn {
+  @include focus($offset: 1px, $width: 4px);
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 25px;
+  position: relative;
+
+  span {
+    background-color: var(--primary-color);
+    display: block;
+    width: 80%;
+    height: 4px;
+    &::before {
+      content: "";
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: inherit;
+      background-color: inherit;
+    }
+
+    &::after {
+      content: "";
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: inherit;
+      background-color: inherit;
+    }
+  }
+}
