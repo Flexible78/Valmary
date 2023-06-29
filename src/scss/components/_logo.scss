@@ -1,55 +1,32 @@
 .logo {
-  --width: 61px;
-  --height: 63px;
-  display: flex;
-  grid-column: 6 span;
-  align-items: center;
-}
-.logo__img {
-  width: var(--width);
-  height: var(--height);
-  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    @include max1000 {
-      --width: 74px;
-      --height: 76.7px;
-      justify-self: center;
-      grid-column: 2 span;
-      transform: translateY(-3px);
-    }
-    @include max768 {
-      --width: 70px;
-      --height: 72.52px;
-      justify-self: center;
-      grid-column: 2 span;
-      transform: translateY(-5px);
-    }
-    @include max480 {
-      --width: 45px;
-      --height: 46px;
-      justify-self: center;
-      grid-column: 2 span;
-    }
+   --width: 61px;
+   --height: 63px;
 
-    @include max320 {
-      --width: 39.6px;
-      --height: 41px;
-      justify-self: center;
-      grid-column: 2 span;
-    }
-  }
+   display: flex;
+   align-items: center;
+   grid-column: 6 span;
+}
+
+.logo__img {
+   width: var(--width);
+   height: var(--height);
+
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+   }
 }
 
 .logo__text {
-  margin-left: 11px;
-  font-weight: 400;
-  font-size: 11px;
-  letter-spacing: -0.6px;
-  color: rgba($color: #1C1E23, $alpha: 80%);
-  @include max1000 {
-    display: none;
-  }
+   margin-left: 11px;
+   font-weight: 400;
+   font-size: 11px;
+   letter-spacing: -0.6px;
+   color: rgba($color: #1c1e23, $alpha: 80%);
+
+   @include max1000 {
+      display: none;
+   }
 }

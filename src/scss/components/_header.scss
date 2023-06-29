@@ -1,254 +1,279 @@
 .header {
-  padding: 12px 0 19px;
-  position: relative;
-  background-color: var(--color-white);
+   position: relative;
+   padding: 12px 0 19px;
+   color: #fff;
+   background-color: var(--color-white);
 
-  &::after {
-    position: absolute;
-    top: 55%;
-    left: 0;
-    content: '';
-    width: 100vw;
-    background-color: rgba($color: #55a630, $alpha: 50%);
-    height: 1px;
-    @include max1000 {
-      display: none;
-    }
-  }
+   &::after {
+      content: "";
+      position: absolute;
+      top: 55%;
+      left: 0;
+      width: 100vw;
+      height: 1px;
+      background-color: rgba($color: #55a630, $alpha: 50%);
+
+      @include max1000 {
+         display: none;
+      }
+   }
 }
 
 .header__container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  row-gap: 32px;
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   row-gap: 32px;
 
-  @include max1000 {
-    align-items: center;
-    row-gap: initial;
-  }
-  @include max768 {
-    max-width: 744px;
-    align-items: center;
-    row-gap: initial;
-  }
-  @include max480 {
-    max-width: 472px;
-    align-items: center;
-    row-gap: initial;
-  }
-  @include max320 {
-    max-width: 328px;
-    align-items: center;
-    row-gap: initial;
-  }
+   @include max1000 {
+      row-gap: initial;
+      align-items: center;
+   }
+
+   @include max768 {
+      row-gap: initial;
+      align-items: center;
+      max-width: 744px;
+   }
+
+   @include max480 {
+      row-gap: initial;
+      align-items: center;
+      max-width: 472px;
+   }
+
+   @include max320 {
+      row-gap: initial;
+      align-items: center;
+      max-width: 328px;
+   }
 }
 
 .header__logo {
-  @include focus;
-  grid-column: 6 span;
-  justify-self: start;
+   @include focus;
 
-  img {
-    @include max1000 {
-      --width: 74px;
-      --height: 76.7px;
-      justify-self: center;
-      grid-column: 2 span;
-    }
+   justify-self: start;
+   grid-column: 6 span;
 
-    @include max768 {
-      --width: 70px;
-      --height: 72.52px;
-      justify-self: center;
-      grid-column: 2 span;
-    }
+   img {
+      @include max1000 {
+         --width: 74px;
+         --height: 76.7px;
 
-    @include max480 {
-      --width: 45px;
-      --height: 46px;
-      justify-self: center;
-      grid-column: 2 span;
-    }
+         justify-self: center;
+         grid-column: 2 span;
+      }
 
-    @include max320 {
-      --width: 39.6px;
-      --height: 41px;
-      justify-self: center;
-      grid-column: 2 span;
-    }
-  }
+      @include max768 {
+         --width: 70px;
+         --height: 72.52px;
+
+         justify-self: center;
+         grid-column: 2 span;
+      }
+
+      @include max480 {
+         --width: 45px;
+         --height: 46px;
+
+         justify-self: center;
+         grid-column: 2 span;
+      }
+
+      @include max320 {
+         --width: 39.6px;
+         --height: 41px;
+
+         justify-self: center;
+         grid-column: 2 span;
+      }
+   }
+
+   @include max1000 {
+      transform: translateY(-3px);
+   }
+
+   @include max768 {
+      transform: translateY(-5px);
+   }
 }
 
 .header__phone {
-  display: flex;
-  column-gap: 22px;
-  align-items: center;
-  grid-column: 3 span;
-  justify-self: end;
-  transform: translateX(11px);
-  @include max1280 {
-    column-gap: 19px;
-  }
-  @include max1000 {
-    grid-column: 5 span;
-    column-gap: 18px;
-    transform: translate(-5.2px, -3px);
-  }
-  @include max768 {
-    grid-column: 5 span;
-    column-gap: 18px;
-    transform: translate(4.8px, -4px);
+   display: flex;
+   column-gap: 22px;
+   align-items: center;
+   justify-self: end;
+   grid-column: 3 span;
+   transform: translateX(11px);
 
-  }
-  @include max480 {
-    grid-column: 5 span;
-    column-gap: 9px;
-    transform: translate(4.8px, -4px);
-  }
-  @include max320 {
-    display: none;
-  }
-
-  img {
-    display: block;
-    width: 28px;
-    height: 28px;
-
-    @include max1000 {
+   img {
+      display: block;
       width: 28px;
-      width: 28px;
-    }
-    @include max768 {
-      width: 23px;
-      width: 23px;
-    }
-    @include max480 {
-      width: 14px;
-      width: 14px;
-    }
-    @include max320 {
+      height: 28px;
+
+      @include max1000 {
+         width: 28px;
+      }
+
+      @include max768 {
+         width: 23px;
+      }
+
+      @include max480 {
+         width: 14px;
+      }
+
+      @include max320 {
+         display: none;
+      }
+   }
+
+   @include max1280 {
+      column-gap: 19px;
+   }
+
+   @include max1000 {
+      column-gap: 18px;
+      grid-column: 5 span;
+      transform: translate(-5.2px, -3px);
+   }
+
+   @include max768 {
+      column-gap: 18px;
+      grid-column: 5 span;
+      transform: translate(4.8px, -4px);
+   }
+
+   @include max480 {
+      column-gap: 9px;
+      grid-column: 5 span;
+      transform: translate(4.8px, -4px);
+   }
+
+   @include max320 {
       display: none;
-    }
-  }
+   }
 }
 
 .header__phone--text {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 25px;
-  line-height: 1.04;
-  @include max1280 {
-    font-size: 20px;
-    line-height: 1.25;
-  }
-  @include max768 {
-    font-size: 12px;
-    line-height: 2.04;
-  }
+   font-weight: 500;
+   font-style: normal;
+   font-size: 25px;
+   line-height: 1.04;
+
+   @include max1280 {
+      font-size: 20px;
+      line-height: 1.25;
+   }
+
+   @include max768 {
+      font-size: 12px;
+      line-height: 2.04;
+   }
 }
 
 .header__actions {
-  display: flex;
-  align-items: center;
-  column-gap: 66px;
-  grid-column: 3 span;
-  justify-self: end;
-  @include max1280 {
-    column-gap: 46px;
-  }
-  @include max1000 {
-    display: none;
-  }
+   display: flex;
+   column-gap: 66px;
+   align-items: center;
+   justify-self: end;
+   grid-column: 3 span;
+
+   @include max1280 {
+      column-gap: 46px;
+   }
+
+   @include max1000 {
+      display: none;
+   }
 }
 
 .social {
-  --icon-size: 2.8rem;
-  --gap: 2.6rem;
-  --color: var(--primary-color);
-  display: flex;
-  transform: translateX(4px);
-  column-gap: var(--gap);
+   --icon-size: 2.8rem;
+   --gap: 2.6rem;
+   --color: var(--primary-color);
 
-  .social__link {
-    @include focus;
+   display: flex;
+   column-gap: var(--gap);
+   transform: translateX(4px);
 
-    width: var(--icon-size);
-    height: var(--icon-size);
-    color: var(--color);
+   .social__link {
+      @include focus;
 
-    svg {
-      width: 100%;
-      height: 100%;
-      color: inherit;
-      fill: currentColor;
-      object-fit: cover;
-    }
-  }
+      width: var(--icon-size);
+      height: var(--icon-size);
+      color: var(--color);
+
+      svg {
+         width: 100%;
+         height: 100%;
+         color: inherit;
+         fill: currentcolor;
+         object-fit: cover;
+      }
+   }
 }
 
 .lng-selector {
-  position: relative;
-  display: flex;
-  transform: translateX(4px);
-  align-items: flex-start;
-  column-gap: 1.4rem;
-  color: var(--primary-color);
+   @include focus;
 
-  @include focus;
-
+   position: relative;
+   display: flex;
+   column-gap: 1.4rem;
+   align-items: flex-start;
+   color: var(--primary-color);
+   transform: translateX(4px);
 }
 
 .lng-selector__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
-
 
 .lng-selector__icon {
-  display: block;
-  width: 11px;
-  height: 6.27px;
-  margin-top: 12px;
-  color: var(--primary-color);
+   display: block;
+   width: 11px;
+   height: 6.27px;
+   margin-top: 12px;
+   color: var(--primary-color);
 
-  svg {
-    width: 100%;
-    height: 100%;
-    color: inherit;
-    fill: currentColor;
-    object-fit: cover;
-  }
+   svg {
+      width: 100%;
+      height: 100%;
+      color: inherit;
+      fill: currentcolor;
+      object-fit: cover;
+   }
 }
 
-
 .header__menu {
-  grid-column: 12 span;
-  @include max1000 {
-    display: none;
-  }
+   grid-column: 12 span;
 
+   @include max1000 {
+      display: none;
+   }
 }
 
 .menu {
 }
 
 .menu__list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
 }
 
 .menu__link {
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.62;
+   font-weight: 500;
+   font-style: normal;
+   line-height: 1.62;
 }
 
 .header__burger-btn {
-  display: none;
-  grid-column: 5 span;
-  @include max1000 {
-    display: block;
-  }
+   display: none;
+   grid-column: 5 span;
+
+   @include max1000 {
+      display: block;
+   }
 }
