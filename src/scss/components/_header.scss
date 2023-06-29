@@ -1,7 +1,6 @@
 .header {
    position: relative;
    padding: 12px 0 19px;
-   color: #fff;
    background-color: var(--color-white);
 
    &::after {
@@ -54,46 +53,38 @@
    justify-self: start;
    grid-column: 6 span;
 
-   img {
-      @include max1000 {
-         --width: 74px;
-         --height: 76.7px;
-
-         justify-self: center;
-         grid-column: 2 span;
-      }
-
-      @include max768 {
-         --width: 70px;
-         --height: 72.52px;
-
-         justify-self: center;
-         grid-column: 2 span;
-      }
-
-      @include max480 {
-         --width: 45px;
-         --height: 46px;
-
-         justify-self: center;
-         grid-column: 2 span;
-      }
-
-      @include max320 {
-         --width: 39.6px;
-         --height: 41px;
-
-         justify-self: center;
-         grid-column: 2 span;
-      }
-   }
-
    @include max1000 {
+      --width: 74px;
+      --height: 76.7px;
+
+      justify-self: center;
+      grid-column: 2 span;
       transform: translateY(-3px);
    }
 
    @include max768 {
-      transform: translateY(-5px);
+      --width: 70px;
+      --height: 72.52px;
+
+      justify-self: center;
+      grid-column: 2 span;
+      transform: translateY(-2px);
+   }
+
+   @include max480 {
+      --width: 45px;
+      --height: 46px;
+
+      justify-self: center;
+      grid-column: 2 span;
+   }
+
+   @include max320 {
+      --width: 39.6px;
+      --height: 41px;
+      transform: translate(4px, -3px);
+      justify-self: end;
+      grid-column: 7 span;
    }
 }
 
@@ -140,7 +131,7 @@
    @include max768 {
       column-gap: 18px;
       grid-column: 5 span;
-      transform: translate(4.8px, -4px);
+      transform: translate(1.5px,-1.9px);
    }
 
    @include max480 {
@@ -164,10 +155,20 @@
       font-size: 20px;
       line-height: 1.25;
    }
-
+   @include max1000 {
+      font-size: 20px;
+      line-height: 2.04;
+   }
    @include max768 {
+      font-size: 19px;
+      line-height: 2.04;
+   }
+   @include max480 {
       font-size: 12px;
       line-height: 2.04;
+   }
+   @include max320 {
+      display: none;
    }
 }
 
@@ -254,8 +255,6 @@
    }
 }
 
-.menu {
-}
 
 .menu__list {
    display: flex;
