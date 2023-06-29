@@ -90,7 +90,20 @@ body {
 }
 
 .container {
-  max-width: 123rem;
+  max-width: 1230px;
   margin: 0 auto;
   padding: 0 15px;
+
+  @include max1000 {
+    max-width: 988px;
+}
+  @include max768 {
+    max-width: 674px;
+  }
+  @include max480 {
+    max-width: 390px;
+  }
+  @include max320 {
+    max-width: 330px;
+  }
 }

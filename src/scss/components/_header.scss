@@ -1,5 +1,5 @@
 .header {
-  padding: 1.2rem 0 1.9rem; // add 1.2rem 0 1.9rem 0.7rem
+  padding: 12px 0 19px;
   position: relative;
   background-color: var(--color-white);
 
@@ -26,7 +26,18 @@
     align-items: center;
     row-gap: initial;
   }
-  @include max1000 {
+  @include max768 {
+    max-width: 744px;
+    align-items: center;
+    row-gap: initial;
+  }
+  @include max480 {
+    max-width: 472px;
+    align-items: center;
+    row-gap: initial;
+  }
+  @include max320 {
+    max-width: 328px;
     align-items: center;
     row-gap: initial;
   }
@@ -34,31 +45,37 @@
 
 .header__logo {
   @include focus;
-  display: flex;
   grid-column: 6 span;
-  align-items: center;
   justify-self: start;
-  @include max1000 {
-    grid-column: 2 span;
-  }
-}
 
-.logo__img {
-  object-fit: cover;
-  object-position: center;
-  width: var(--size);
-  height: var(--size);
-}
+  img {
+    @include max1000 {
+      --width: 74px;
+      --height: 76.7px;
+      justify-self: center;
+      grid-column: 2 span;
+    }
 
-.logo__text {
-  margin-left: 11px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 11px;
-  letter-spacing: -0.6px;
-  color: rgba($color: #1C1E23, $alpha: 80%);
-  @include max1000 {
-    display: none;
+    @include max768 {
+      --width: 70px;
+      --height: 72.52px;
+      justify-self: center;
+      grid-column: 2 span;
+    }
+
+    @include max480 {
+      --width: 45px;
+      --height: 46px;
+      justify-self: center;
+      grid-column: 2 span;
+    }
+
+    @include max320 {
+      --width: 39.6px;
+      --height: 41px;
+      justify-self: center;
+      grid-column: 2 span;
+    }
   }
 }
 
@@ -69,13 +86,47 @@
   grid-column: 3 span;
   justify-self: end;
   transform: translateX(11px);
+  @include max1280 {
+    column-gap: 19px;
+  }
+  @include max1000 {
+    grid-column: 5 span;
+    column-gap: 18px;
+    transform: translate(-5.2px, -3px);
+  }
+  @include max768 {
+    grid-column: 5 span;
+    column-gap: 18px;
+    transform: translate(4.8px, -4px);
+
+  }
+  @include max480 {
+    grid-column: 5 span;
+    column-gap: 9px;
+    transform: translate(4.8px, -4px);
+  }
+  @include max320 {
+    display: none;
+  }
 
   img {
     display: block;
     width: 28px;
     height: 28px;
-    fill: #55A630;
+
     @include max1000 {
+      width: 28px;
+      width: 28px;
+    }
+    @include max768 {
+      width: 23px;
+      width: 23px;
+    }
+    @include max480 {
+      width: 14px;
+      width: 14px;
+    }
+    @include max320 {
       display: none;
     }
   }
@@ -86,6 +137,14 @@
   font-weight: 500;
   font-size: 25px;
   line-height: 1.04;
+  @include max1280 {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+  @include max768 {
+    font-size: 12px;
+    line-height: 2.04;
+  }
 }
 
 .header__actions {
@@ -94,6 +153,12 @@
   column-gap: 66px;
   grid-column: 3 span;
   justify-self: end;
+  @include max1280 {
+    column-gap: 46px;
+  }
+  @include max1000 {
+    display: none;
+  }
 }
 
 .social {
@@ -179,6 +244,7 @@
   font-weight: 500;
   line-height: 1.62;
 }
+
 .header__burger-btn {
   display: none;
   grid-column: 5 span;

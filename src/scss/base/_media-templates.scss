@@ -42,6 +42,12 @@
   }
 }
 
+@mixin max480 {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
 @mixin max428 {
   @media (max-width: 428px) {
     @content;

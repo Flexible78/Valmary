@@ -3,17 +3,18 @@
   display: flex;
   align-items: center;
   width: 50px;
-  height: 25px;
+  height: 30px;
   position: relative;
+  padding-bottom: 12px;
 
   span {
     background-color: var(--primary-color);
     display: block;
     width: 80%;
-    height: 4px;
+    height: 5px;
     &::before {
-      content: "";
-      top: 0;
+      content: '';
+      top: -5.3px;
       left: 0;
       position: absolute;
       width: 100%;
@@ -22,8 +23,8 @@
     }
 
     &::after {
-      content: "";
-      top: 0;
+      content: '';
+      bottom: 6.2px;
       left: 0;
       position: absolute;
       width: 100%;
