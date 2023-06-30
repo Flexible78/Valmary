@@ -7,16 +7,6 @@
    width: 50px;
    height: 30px;
    padding-bottom: 12px;
-   @include max480 {
-      width: 30px;
-      height: 20px;
-      transform: translateX(3px);
-   }
-   @include max320 {
-      width: 30px;
-      height: 20px;
-      transform: translate(-5px, 5px);
-   }
 
    span {
       display: block;
@@ -44,4 +34,120 @@
          background-color: inherit;
       }
    }
+
+   @include max480 {
+      width: 30px;
+      height: 20px;
+      transform: translateX(3px);
+   }
+
+   @include max320 {
+      width: 30px;
+      height: 20px;
+      transform: translate(-5px, 5px);
+   }
+}
+
+.mobile-menu {
+   display: none;
+   @include max1000 {
+      display: block;
+   }
+}
+
+.mobile-menu__body {
+}
+
+.mobile-menu__phone {
+
+   .mobile-menu__phone--text {
+
+   }
+}
+
+.mobile-menu__lng-selector {
+}
+
+.mobile-menu__nav {
+}
+
+.mobile-menu__list {
+}
+
+.mobile-menu__social {
+}
+
+.social {
+}
+
+.mobile-menu-close {
+}
+
+.btn-reset {
+}
+
+.container {
+}
+
+.header__container {
+}
+
+.mobile-menu-open {
+}
+
+.header__mobile-menu-open {
+}
+
+.header__burger-btn {
+}
+
+.burger-btn {
+}
+
+.header__logo {
+}
+
+.logo {
+}
+
+.logo__img {
+}
+
+.logo__text {
+}
+
+.header__phone {
+}
+
+.header__phone--text {
+}
+
+.header__actions {
+}
+
+.header__social {
+}
+
+.social__link {
+}
+
+.header__lng-selector {
+}
+
+.lng-selector {
+}
+
+.lng-selector__btn {
+}
+
+.lng-selector__icon {
+}
+
+.header__nav {
+}
+
+.menu {
+}
+
+.menu__list {
 }

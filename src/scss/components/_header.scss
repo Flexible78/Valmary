@@ -82,9 +82,9 @@
    @include max320 {
       --width: 39.6px;
       --height: 41px;
-      transform: translate(4px, -3px);
       justify-self: end;
       grid-column: 7 span;
+      transform: translate(4px, -3px);
    }
 }
 
@@ -131,7 +131,7 @@
    @include max768 {
       column-gap: 18px;
       grid-column: 5 span;
-      transform: translate(1.5px,-1.9px);
+      transform: translate(1.5px, -1.9px);
    }
 
    @include max480 {
@@ -155,18 +155,22 @@
       font-size: 20px;
       line-height: 1.25;
    }
+
    @include max1000 {
       font-size: 20px;
       line-height: 2.04;
    }
+
    @include max768 {
       font-size: 19px;
       line-height: 2.04;
    }
+
    @include max480 {
       font-size: 12px;
       line-height: 2.04;
    }
+
    @include max320 {
       display: none;
    }
@@ -247,7 +251,7 @@
    }
 }
 
-.header__menu {
+.header__nav {
    grid-column: 12 span;
 
    @include max1000 {
@@ -255,17 +259,17 @@
    }
 }
 
-
 .menu__list {
    display: flex;
    align-items: center;
    justify-content: space-between;
-}
-
-.menu__link {
    font-weight: 500;
    font-style: normal;
    line-height: 1.62;
+}
+
+a {
+   @include focus;
 }
 
 .header__burger-btn {
