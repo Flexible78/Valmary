@@ -82,6 +82,7 @@
    @include max320 {
       --width: 39.6px;
       --height: 41px;
+
       justify-self: end;
       grid-column: 7 span;
       transform: translate(4px, -3px);
