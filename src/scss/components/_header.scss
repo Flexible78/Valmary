@@ -104,10 +104,12 @@
 
       @include max1000 {
          width: 28px;
+         height: 28px;
       }
 
       @include max768 {
          width: 23px;
+         height: 23px;
       }
 
       @include max480 {

@@ -2,11 +2,19 @@
    <div class="mobile-menu">
       <div class="mobile-menu__body">
          <a class="mobile-menu__phone" href="tel:+0800508622">
-               <img src="@img/ic-phone.svg" alt="phone" />
-               <span class="mobile-menu__phone--text">0 (800) 508-622</span>
-            </a>
+            <img src="@img/ic-phone.svg" alt="phone" />
+            <span>0 (800) 508-622</span>
          </a>
-         <div class="mobile-menu__lng-selector"></div>
+         <div class="mobile-menu__lng-selector">
+            <button class="lng-selector__btn" tabindex="-1">
+               <img src="@img/flag-rf.svg" alt="Russian Federation Flag" />
+            </button>
+            <span class="lng-selector__icon">
+               <svg>
+                  <use href="./img/svg/sprite.svg#ic-drop-arrow"></use>
+               </svg>
+            </span>
+         </div>
          <nav class="mobile-menu__nav">
             <ul class="mobile-menu__list">
                <li>
@@ -39,14 +47,14 @@
             </ul>
          </nav>
          <ul class="mobile-menu__social social"></ul>
-         <button class="mobile-menu-close btn-reset"></button>
+         <button class="mobile-menu-close"></button>
       </div>
    </div>
    <div class="container header__container">
-      <button class="mobile-menu-open header__mobile-menu-open btn-reset"></button>
-      <button class="header__burger-btn burger-btn">
+      <!-- <button class="mobile-menu-open header__mobile-menu-open"></button> -->
+      <!-- <button class="header__burger-btn burger-btn">
          <span></span>
-      </button>
+      </button> -->
       <a class="header__logo logo" href="index.html">
          <div class="logo__img">
             <img src="@img/logo.png" alt="Valmari" />
