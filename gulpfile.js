@@ -14,6 +14,7 @@ const svgSprite = require("gulp-svg-sprite");
 // const ttf2woff2 = require('gulp-ttf2woff2');
 // const fs = require('fs');
 const del = require("del");
+const gcmq = require('gulp-group-css-media-queries');
 const webpack = require("webpack");
 const webpackStream = require("webpack-stream");
 const uglify = require("gulp-uglify-es").default;
@@ -81,6 +82,7 @@ const styles = () => {
     .pipe(autoprefixer({
       cascade: false
     }))
+    .pipe(gcmq())
     .pipe(cleanCSS({
       level: 2
     }))

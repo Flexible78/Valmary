@@ -1,11 +1,14 @@
 <header class="header">
    <div class="mobile-menu">
       <div class="mobile-menu__body">
+         <button class="mobile-menu-close">
+            <img src="@img/mobile-menu-close.svg" alt="close menu" />
+         </button>
          <a class="mobile-menu__phone" href="tel:+0800508622">
             <img src="@img/ic-phone.svg" alt="phone" />
             <span>0 (800) 508-622</span>
          </a>
-         <div class="mobile-menu__lng-selector">
+         <div class="mobile-menu__lng-selector lng-selector" tabindex="0">
             <button class="lng-selector__btn" tabindex="-1">
                <img src="@img/flag-rf.svg" alt="Russian Federation Flag" />
             </button>
@@ -17,39 +20,32 @@
          </div>
          <nav class="mobile-menu__nav">
             <ul class="mobile-menu__list">
-               <li>
-                  <a href="#">Курсы обучения</a>
-               </li>
-               <li>
-                  <a href="#">Вебинары</a>
-               </li>
-               <li>
-                  <a href="#">Видео-уроки</a>
-               </li>
-               <li>
-                  <a href="#">Блог</a>
-               </li>
-               <li>
-                  <a href="#">О нас</a>
-               </li>
-               <li>
-                  <a href="#">Прайс</a>
-               </li>
-               <li>
-                  <a href="#">Расcписание</a>
-               </li>
-               <li>
-                  <a href="#">Акции</a>
-               </li>
-               <li>
-                  <a href="#">Магазин</a>
-               </li>
+               <li><a href="#">Курсы обучения</a></li>
+               <li><a href="#">Вебинары</a></li>
+               <li><a href="#">Видео-уроки</a></li>
+               <li><a href="#">Блог</a></li>
+               <li><a href="#">О нас</a></li>
+               <li><a href="#">Прайс</a></li>
+               <li><a href="#">Расcписание</a></li>
+               <li><a href="#">Акции</a></li>
+               <li><a href="#">Магазин</a></li>
             </ul>
          </nav>
-         <ul class="mobile-menu__social social"></ul>
-         <button class="mobile-menu-close"></button>
+         <ul class="mobile-menu__social social">
+            <li>
+               <a class="social__link" href="https://www.facebook.com/">
+                  <svg><use href="./img/svg/sprite.svg#ic-facebook"></use></svg>
+               </a>
+            </li>
+            <li>
+               <a class="social__link" href="https://www.instagram.com/">
+                  <svg><use href="./img/svg/sprite.svg#ic-instagram"></use></svg>
+               </a>
+            </li>
+         </ul>
       </div>
    </div>
+
    <div class="container header__container">
       <!-- <button class="mobile-menu-open header__mobile-menu-open"></button> -->
       <!-- <button class="header__burger-btn burger-btn">
@@ -69,16 +65,12 @@
          <ul class="header__social social">
             <li>
                <a class="social__link" href="https://www.facebook.com/">
-                  <svg>
-                     <use href="./img/svg/sprite.svg#ic-facebook"></use>
-                  </svg>
+                  <svg><use href="./img/svg/sprite.svg#ic-facebook"></use></svg>
                </a>
             </li>
             <li>
                <a class="social__link" href="https://www.instagram.com/">
-                  <svg>
-                     <use href="./img/svg/sprite.svg#ic-instagram"></use>
-                  </svg>
+                  <svg><use href="./img/svg/sprite.svg#ic-instagram"></use></svg>
                </a>
             </li>
          </ul>
