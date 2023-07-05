@@ -80,6 +80,10 @@ body {
    color: var(--main-text-color);
 }
 
+.lock {
+   overflow: hidden;
+}
+
 .page__wrapper {
    display: flex;
    flex-direction: column;

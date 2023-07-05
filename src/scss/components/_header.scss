@@ -77,6 +77,7 @@
 
       justify-self: center;
       grid-column: 2 span;
+      transform: translateY(-5px);
    }
 
    @include max320 {
@@ -140,7 +141,7 @@
    @include max480 {
       column-gap: 9px;
       grid-column: 5 span;
-      transform: translate(4.8px, -4px);
+      transform: translate(2.4px, -4.7px);
    }
 
    @include max320 {
@@ -166,6 +167,11 @@
 
    @include max768 {
       font-size: 19px;
+      line-height: 2.04;
+   }
+
+   @include max600 {
+      font-size: 17px;
       line-height: 2.04;
    }
 

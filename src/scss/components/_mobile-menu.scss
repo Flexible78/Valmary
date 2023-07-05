@@ -13,6 +13,7 @@
       width: 80%;
       height: 5px;
       background-color: var(--primary-color);
+      pointer-events: none;
 
       &::before {
          content: "";
@@ -41,7 +42,7 @@
       transform: translateX(3px);
    }
 
-   @include max320 {
+   @include max390 {
       width: 30px;
       height: 20px;
       transform: translate(-5px, 5px);
@@ -51,12 +52,19 @@
 .mobile-menu {
    position: absolute;
    top: 0;
-   left: 0;
+   left: -100%;
    z-index: 100;
    display: none;
    width: 100vw;
    height: 100vh;
    background-color: rgb($color:#424242, $alpha:55%);
+   opacity: 0;
+   transition: opacity 0.38s ease-in-out;
+
+   &.active {
+      left: 0;
+      opacity: 1;
+   }
 
    @include max1000 {
       display: block;
@@ -69,11 +77,23 @@
    display: flex;
    flex-direction: column;
    align-items: flex-start;
+   overflow: auto;
    width: 368px;
-   padding: 29px 35px 120px;
+   max-height: 100vh;
+   padding: 29px 35px 117px;
    background-color: var(--color-white);
+   transform: translateX(-100%);
+   transition: transform 0.38s ease-in-out;
 
-   // max-height: 796px;
+   &.active {
+      transform: translateX(0);
+   }
+
+   @include max390 {
+      width: 286px;
+      height: 100vh;
+      padding: 20px 24px 50px;
+   }
 }
 
 .mobile-menu__phone {
@@ -89,15 +109,34 @@
    img {
       width: 23px;
       height: 23px;
+
+      @include max390 {
+         width: 15px;
+         height: 15px;
+      }
+   }
+
+   @include max390 {
+      column-gap: 8px;
+      font-size: 15px;
+      line-height: 1.13;
    }
 }
 
 .mobile-menu__lng-selector {
    margin-top: 44px;
+
+   @include max390 {
+      margin-top: 32px;
+   }
 }
 
 .mobile-menu__nav {
-   margin-top: 50px;
+   margin-top: 44px;
+
+   @include max390 {
+      margin-top: 24.8px;
+   }
 }
 
 .mobile-menu__list {
@@ -129,6 +168,10 @@
    a:hover {
       color: var(--primary-color);
    }
+
+   @include max390 {
+      row-gap: 13.5px;
+   }
 }
 
 .mobile-menu__social {
@@ -136,17 +179,37 @@
    --gap: 30px;
 
    margin-top: 52px;
+
+   @include max390 {
+      --icon-size: 30px;
+      --gap: 26.86px;
+
+      margin-top: 45px;
+   }
 }
+
 .mobile-menu-close {
    position: absolute;
-   right: 3.5%;
-   top: 6.3%;
+   top: 3.6%;
+   right: 6.5%;
    width: 30px;
    height: 30px;
-   img{
+
+   img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
+      pointer-events: none;
+
+      @include max390 {
+         width: 20px;
+         height: 20px;
+      }
+   }
+
+   @include max390 {
+      top: 2.8%;
+      right: 16.5%;
    }
 }
