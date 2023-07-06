@@ -1,7 +1,7 @@
 .hero {
    padding: 104px 0 138px;
    background-image: url("@img/hero1.png");
-   background-position: 100% 50%;
+   background-position: 91% 50%;
    background-size: contain;
    background-repeat: no-repeat;
    background-color: var(--bg-color);
@@ -18,7 +18,7 @@
 }
 
 .hero__content {
-   grid-column: 5 span;
+   grid-column: 6 span;
 }
 
 .hero-content__title {
@@ -32,6 +32,7 @@
 }
 
 .hero-content__descr {
+   max-width: 419px;
    padding-bottom: 57px;
 }
 
