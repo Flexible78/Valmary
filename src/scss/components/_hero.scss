@@ -1,0 +1,55 @@
+.hero {
+   padding: 104px 0 138px;
+   background-image: url("@img/hero1.png");
+   background-position: 100% 50%;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-color: var(--bg-color);
+}
+
+.hero__container {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   column-gap: 20px;
+}
+
+.hero-content {
+
+}
+
+.hero__content {
+   grid-column: 5 span;
+}
+
+.hero-content__title {
+   padding-bottom: 20px;
+}
+
+.page-title {
+}
+
+.page-title--home {
+}
+
+.hero-content__descr {
+   padding-bottom: 57px;
+}
+
+.page-descr--home {
+}
+
+.hero__page-descr {
+}
+
+.hero__btns-block {
+   display: flex;
+   column-gap: 20px;
+}
+
+.hero__btn {
+   padding: 20px 40px;
+}
+
+.hero__btn--outline {
+   padding: 22px 59px;
+}

@@ -1,0 +1,84 @@
+.btn {
+   --color: transparent;
+   --bgc: var(--primary-color);
+   --bdc: var(--primary-color);
+   --btn-text-color: var(--main-text-color);
+   --bdw: 0;
+   --bds: none;
+   --fw: 600;
+
+   @include focus;
+
+   border: var(--bdw) var(--bds) var(--bdc);
+   font-weight: var(--fw);
+   color: var(--btn-text-color);
+   background-color: var(--bgc);
+}
+
+   .btn-fill {
+      --btn-text-color: var(--color-white);
+   }
+
+   .btn-fill--primary {
+      --color: var(--primary-color);
+   }
+
+   .btn-fill--secondary {
+      --color: var(--secondary-color);
+   }
+
+   .btn-outline {
+      --bgc: transparent;
+      --bdw: 1px;
+      --bds: solid;
+   }
+
+   .btn-outline--primary {
+      --color: var(--primary-color);
+      --btn-text-color: var(--color);
+   }
+
+   .btn-outline--secondary {
+      --color: var(--secondary-color);
+      --btn-text-color: var(--color);
+   }
+
+   .btn-radius {
+      --bdr: unset;
+   }
+
+   /* --btn-fill-text-color: var(--primary-color);
+   --btn-fill-bg-color: var(--color-white);
+   --btn-fill-bg-color-state: var(--color-primary-state);
+   --btn-outline-border-primary-color: var(--color-primary-state);
+   --btn-outline-border-white-color: var(--color-white);
+
+   border: solid 1px var(--primary-color);
+   font-family: "Montserrat", sans-serif;
+   font-weight: 600;
+   font-size: 18px;
+   line-height: 1.44;
+   text-align: center;
+   color: var(--color-primary);
+
+   &--fill {
+      border: none;
+      color: var(--color-primary);
+      background-color: var(--btn-fill-bg-color);
+
+      &:focus {
+         outline: none;
+      }
+
+      &:focus-visible {
+         outline: 3px solid var(--color-grey--900);
+         outline-offset: 1px;
+      }
+
+      &:hover {
+         border-color: var(--color-primary);
+         color: var(--color-white);
+         background-color: var(--primary-color);
+      }
+   } */
+

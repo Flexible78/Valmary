@@ -80,6 +80,15 @@
       transform: translateY(-5px);
    }
 
+   @include max390 {
+      --width: 43px;
+      --height: 43px;
+
+      justify-self: end;
+      grid-column: 7 span;
+      transform: translate(4px, -3px);
+   }
+
    @include max320 {
       --width: 39.6px;
       --height: 41px;
@@ -117,6 +126,7 @@
          width: 14px;
       }
 
+
       @include max320 {
          display: none;
       }
@@ -144,6 +154,10 @@
       transform: translate(2.4px, -4.7px);
    }
 
+
+   @include max390 {
+      display: none;
+   }
    @include max320 {
       display: none;
    }
