@@ -46,9 +46,17 @@
       background-size: 232px 192px;
    }
 
+   @include max444 {
+      background-position: bottom -7.6% right -8.9%;
+      background-size: 210px 176px;
+   }
+   @include max390 {
+      background-position: bottom -7.6% right -8.9%;;
+      background-size: 190px 166px;
+   }
    @include max320 {
-      padding-top: 38.4px;
-      background-position: bottom 0% right 0%;
+      padding: 38.4px 0 186px;
+      background-position: bottom 0 center;
       background-size: 231px 196px;
    }
 }
@@ -59,7 +67,7 @@
    column-gap: 20px;
 
    @include max320 {
-      max-width: 222px;
+      max-width: 248px;
    }
 }
 
@@ -185,6 +193,11 @@
       row-gap: 12px;
       margin-top: 17px;
    }
+   @include max320 {
+      justify-content: center;
+      row-gap: 8px;
+      margin-top: 12px;
+   }
 }
 
 .hero__btn {
@@ -221,8 +234,8 @@
 
    @include max320 {
       flex: 0 0 140px;
-      padding: 10px 26.5px;
-      font-size: 8px;
-      line-height: 0.75;
+      padding: 2px 12.5px;
+      font-size: 10px;
+      line-height: 2.6;
    }
 }
