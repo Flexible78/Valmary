@@ -1,10 +1,51 @@
 .hero {
    padding: 104px 0 138px;
-   background-image: url("@img/hero1.png");
-   background-position: 91% 50%;
-   background-size: contain;
+   background-image: url("@img/home-page-hero-bgi.png");
+   background-position: bottom -15% right 12.14%;
+   background-size: 681px 556px;
    background-repeat: no-repeat;
-   background-color: var(--bg-color);
+   background-color: #ecffeb;
+
+   @include max1200 {
+      padding: 75px 0 97px;
+      background-position: bottom 0% right 0%;
+      background-size: 527px 430px;
+   }
+
+   @include max1000 {
+      padding: 77px 0 97px;
+      background-position: bottom 0% right 0%;
+      background-size: 527px 430px;
+   }
+
+   @include max992 {
+      background-position: bottom 0% right -49px;
+      background-size: 470px 383.7px;
+   }
+
+   @include max834 {
+      padding: 45px 0 51px;
+      background-position: bottom 0% right -59px;
+      background-size: 354px 289px;
+   }
+
+   @include max768 {
+      padding: 37px 0 30px;
+      background-position: bottom 0% right 11.9%;
+      background-size: 354px 289px;
+   }
+
+   @include max480 {
+      padding: 41px 0 33px;
+      background-position: bottom 0% right 11.9%;
+      background-size: 226px 192px;
+   }
+
+   @include max320 {
+      padding-top: 12px;
+      background-position: bottom 0% right 0%;
+      background-size: 231px 196px;
+   }
 }
 
 .hero__container {
@@ -13,44 +54,97 @@
    column-gap: 20px;
 }
 
-.hero-content {
+.hero__main-title {
+   font-weight: 700;
+   font-size: 65px;
+   line-height: 1;
+   text-transform: uppercase;
+   color: var(--primary-color);
 
+   @include max992 {
+      font-size: 56px;
+      line-height: 1;
+   }
+
+   @include max834 {
+      font-size: 50px;
+      line-height: 1;
+   }
+
+   @include max768 {
+      font-size: 40px;
+      line-height: 1;
+   }
+}
+
+.hero__main-text {
+   margin-top: 19px;
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 1.15;
+   color: #424242;
+
+   @include max992 {
+      font-size: 16px;
+      line-height: 1.07;
+   }
+
+   @include max834 {
+      margin-top: 12px;
+   }
+
+   @include max768 {
+      margin-top: 9px;
+      font-size: 14px;
+      line-height: 1.07;
+   }
 }
 
 .hero__content {
    grid-column: 6 span;
-}
 
-.hero-content__title {
-   padding-bottom: 20px;
-}
-
-.page-title {
-}
-
-.page-title--home {
-}
-
-.hero-content__descr {
-   max-width: 419px;
-   padding-bottom: 57px;
-}
-
-.page-descr--home {
-}
-
-.hero__page-descr {
+   @include max1000 {
+      grid-column: 7 span;
+   }
 }
 
 .hero__btns-block {
    display: flex;
    column-gap: 20px;
+   align-items: center;
+   margin-top: 58px;
+
+   @include max1000 {
+      column-gap: 25px;
+      margin-top: 45px;
+   }
+
+   @include max834 {
+      flex-wrap: wrap;
+      row-gap: 17px;
+      margin-top: 33px;
+   }
+
+   @include max768 {
+      margin-top: 27px;
+   }
 }
 
 .hero__btn {
-   padding: 20px 40px;
-}
+   flex: 0 0 285px;
+   padding: 20px 10px;
+   font-size: 18px;
+   text-align: center;
 
-.hero__btn--outline {
-   padding: 22px 59px;
+   @include max1000 {
+      flex: 0 0 247px;
+      padding: 14px 10px;
+   }
+
+   @include max768 {
+      flex: 0 0 220px;
+      padding: 17px 10px;
+      font-size: 15px;
+      line-height: 0.8;
+   }
 }

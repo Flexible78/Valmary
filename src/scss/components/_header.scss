@@ -16,6 +16,9 @@
          display: none;
       }
    }
+   @include max1000 {
+      padding: 12px 0 8.23px; //botom 19px
+   }
 }
 
 .header__container {
@@ -126,7 +129,6 @@
          width: 14px;
       }
 
-
       @include max320 {
          display: none;
       }
@@ -154,10 +156,10 @@
       transform: translate(2.4px, -4.7px);
    }
 
-
    @include max390 {
       display: none;
    }
+
    @include max320 {
       display: none;
    }
