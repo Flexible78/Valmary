@@ -8,7 +8,7 @@
 
    @include max1200 {
       padding: 75px 0 97px;
-      background-position: bottom 0% right 0%;
+      background-position: bottom 0 right 0%;
       background-size: 527px 430px;
    }
 
@@ -35,14 +35,19 @@
       background-size: 354px 289px;
    }
 
+   @include max672 {
+      background-position: bottom 0% right -3.9%;
+      background-size: 290px 245px;
+   }
+
    @include max480 {
       padding: 41px 0 33px;
-      background-position: bottom 0% right 11.9%;
-      background-size: 226px 192px;
+      background-position: bottom -7.6% right 8.9%;
+      background-size: 232px 192px;
    }
 
    @include max320 {
-      padding-top: 12px;
+      padding-top: 38.4px;
       background-position: bottom 0% right 0%;
       background-size: 231px 196px;
    }
@@ -52,6 +57,10 @@
    display: grid;
    grid-template-columns: repeat(12, 1fr);
    column-gap: 20px;
+
+   @include max320 {
+      max-width: 222px;
+   }
 }
 
 .hero__main-title {
@@ -74,6 +83,25 @@
    @include max768 {
       font-size: 40px;
       line-height: 1;
+   }
+
+   @include max672 {
+      font-size: 30px;
+      line-height: 1.04;
+   }
+
+   @include max480 {
+      font-size: 24px;
+      line-height: 1.04;
+   }
+
+   @include max320 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      line-height: 0.93;
+      text-align: center;
    }
 }
 
@@ -98,6 +126,26 @@
       font-size: 14px;
       line-height: 1.07;
    }
+
+   @include max672 {
+      margin-top: 12px;
+      font-size: 10px;
+      line-height: 1.15;
+   }
+
+   @include max480 {
+      margin-top: 11px;
+      font-size: 8px;
+      line-height: 1.25;
+   }
+
+   @include max320 {
+      grid-column: 2 span;
+      margin-top: 12px;
+      font-size: 10px;
+      line-height: 1.2;
+      text-align: center;
+   }
 }
 
 .hero__content {
@@ -105,6 +153,10 @@
 
    @include max1000 {
       grid-column: 7 span;
+   }
+
+   @include max320 {
+      grid-column: 12 span;
    }
 }
 
@@ -128,6 +180,11 @@
    @include max768 {
       margin-top: 27px;
    }
+
+   @include max480 {
+      row-gap: 12px;
+      margin-top: 17px;
+   }
 }
 
 .hero__btn {
@@ -146,5 +203,26 @@
       padding: 17px 10px;
       font-size: 15px;
       line-height: 0.8;
+   }
+
+   @include max672 {
+      flex: 0 0 180px;
+      padding: 12.5px 16.5px;
+      font-size: 13px;
+      line-height: 0.75;
+   }
+
+   @include max480 {
+      flex: 0 0 140px;
+      padding: 10.5px 26.5px;
+      font-size: 8px;
+      line-height: 0.75;
+   }
+
+   @include max320 {
+      flex: 0 0 140px;
+      padding: 10px 26.5px;
+      font-size: 8px;
+      line-height: 0.75;
    }
 }
