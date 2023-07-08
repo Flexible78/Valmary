@@ -13,7 +13,7 @@
    }
 
    @include max1000 {
-      padding: 77px 0 97px;
+      padding: 74.7px 0 97px;
       background-position: bottom 0% right 0%;
       background-size: 527px 430px;
    }
@@ -50,10 +50,12 @@
       background-position: bottom -7.6% right -8.9%;
       background-size: 210px 176px;
    }
+
    @include max390 {
-      background-position: bottom -7.6% right -8.9%;;
+      background-position: bottom -7.6% right -8.9%;
       background-size: 190px 166px;
    }
+
    @include max320 {
       padding: 38.4px 0 186px;
       background-position: bottom 0 center;
@@ -77,6 +79,11 @@
    line-height: 1;
    text-transform: uppercase;
    color: var(--primary-color);
+
+   @include max1000 {
+      font-size: 65px;
+      line-height: 0.98;
+   }
 
    @include max992 {
       font-size: 56px;
@@ -176,7 +183,7 @@
 
    @include max1000 {
       column-gap: 25px;
-      margin-top: 45px;
+      margin-top: 46px;
    }
 
    @include max834 {
@@ -190,12 +197,13 @@
    }
 
    @include max480 {
-      row-gap: 12px;
+      row-gap: 8px;
       margin-top: 17px;
    }
+
    @include max320 {
-      justify-content: center;
       row-gap: 8px;
+      justify-content: center;
       margin-top: 12px;
    }
 }
@@ -208,7 +216,7 @@
 
    @include max1000 {
       flex: 0 0 247px;
-      padding: 14px 10px;
+      padding: 17px 10px;
    }
 
    @include max768 {
@@ -227,7 +235,7 @@
 
    @include max480 {
       flex: 0 0 140px;
-      padding: 10.5px 26.5px;
+      padding: 11px 26.5px;
       font-size: 8px;
       line-height: 0.75;
    }
