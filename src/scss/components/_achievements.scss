@@ -1,8 +1,9 @@
 .achievments {
    position: relative;
    top: -21px;
-   box-shadow: -2px 2px 20px 0 rgba(66, 66, 66, 0.15);
+   box-shadow: -2px 2px 20px 0 rgb(66 66 66 / 15%);
    background: var(--color-white);
+
    @include max768 {
       top: -31px;
    }
@@ -31,6 +32,9 @@
    }
 
    @include max320 {
+      display: flex;
+      flex-direction: column;
+      grid-column: 4 span;
       max-width: 180px;
       padding: 23px 0 22px;
    }
@@ -44,13 +48,18 @@
    @include max1000 {
       max-width: 159px;
    }
+
    @include max768 {
       max-width: 120px;
    }
+
    @include max480 {
       max-width: 70px;
    }
    @include max320 {
+      display: flex;
+      flood-color: row;
+      column-gap: 21px;
    }
 }
 
