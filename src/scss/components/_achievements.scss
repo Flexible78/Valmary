@@ -1,0 +1,112 @@
+.achievments {
+   position: relative;
+   top: -21px;
+   box-shadow: -2px 2px 20px 0 rgba(66, 66, 66, 0.15);
+   background: var(--color-white);
+   @include max768 {
+      top: -31px;
+   }
+}
+
+.achievments__container {
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   column-gap: 20px;
+   border-radius: 4px;
+   padding: 54px 0 53px;
+
+   @include max1000 {
+      max-width: 854px;
+      padding: 43px 3px 34px 20px;
+   }
+
+   @include max768 {
+      max-width: 641px;
+      padding: 9px 0 20px;
+   }
+
+   @include max480 {
+      max-width: 354px;
+      padding: 13px 0 19px;
+   }
+
+   @include max320 {
+      max-width: 180px;
+      padding: 23px 0 22px;
+   }
+}
+
+.achievments__card {
+   justify-self: center;
+   grid-column: 3 span;
+   max-width: 196px;
+
+   @include max1000 {
+      max-width: 159px;
+   }
+   @include max768 {
+      max-width: 120px;
+   }
+   @include max480 {
+      max-width: 70px;
+   }
+   @include max320 {
+   }
+}
+
+.achievments__heading {
+   font-weight: 700;
+   font-size: 45px;
+   line-height: 1;
+   text-align: center;
+   color: var(--primary-color);
+
+   @include max1000 {
+      font-size: 40px;
+      line-height: 1.12;
+   }
+
+   @include max768 {
+      font-size: 25px;
+      line-height: 1.8;
+   }
+
+   @include max480 {
+      font-size: 17px;
+      line-height: 2.65;
+   }
+
+   @include max320 {
+      font-size: 17px;
+      line-height: 2.65;
+   }
+}
+
+.achievments__text {
+   margin-top: 10px;
+   font-weight: 400;
+   font-size: 23px;
+   line-height: 1.22;
+   text-align: center;
+   color: var(--main-text-color);
+
+   @include max1000 {
+      font-size: 20px;
+      line-height: 1.05;
+   }
+
+   @include max768 {
+      font-size: 13px;
+      line-height: 1.15;
+   }
+
+   @include max480 {
+      font-size: 8px;
+      line-height: 1.25;
+   }
+
+   @include max320 {
+      font-size: 8px;
+      line-height: 1.25;
+   }
+}

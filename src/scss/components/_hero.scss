@@ -13,7 +13,7 @@
    }
 
    @include max1000 {
-      padding: 74.7px 0 97px;
+      padding: 74px 0 97px;
       background-position: bottom 0% right 0%;
       background-size: 527px 430px;
    }
@@ -25,8 +25,6 @@
 
    @include max834 {
       padding: 45px 0 51px;
-      background-position: bottom 0% right -59px;
-      background-size: 354px 289px;
    }
 
    @include max768 {
@@ -41,19 +39,14 @@
    }
 
    @include max480 {
-      padding: 41px 0 33px;
-      background-position: bottom -7.6% right 8.9%;
+      padding: 42px 0 33px;
+      background-position: bottom -6% right 9%;
       background-size: 232px 192px;
    }
 
    @include max444 {
-      background-position: bottom -7.6% right -8.9%;
-      background-size: 210px 176px;
-   }
-
-   @include max390 {
-      background-position: bottom -7.6% right -8.9%;
-      background-size: 190px 166px;
+      padding: 38.4px 0 186px;
+      background-position: bottom 0 center;
    }
 
    @include max320 {
@@ -67,6 +60,10 @@
    display: grid;
    grid-template-columns: repeat(12, 1fr);
    column-gap: 20px;
+
+   @include max444 {
+      max-width: 348px;
+   }
 
    @include max320 {
       max-width: 248px;
@@ -108,6 +105,15 @@
    @include max480 {
       font-size: 24px;
       line-height: 1.04;
+   }
+
+   @include max444 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 27px;
+      line-height: 0.93;
+      text-align: center;
    }
 
    @include max320 {
@@ -154,6 +160,14 @@
       line-height: 1.25;
    }
 
+   @include max444 {
+      grid-column: 2 span;
+      margin-top: 12px;
+      font-size: 10px;
+      line-height: 1.2;
+      text-align: center;
+   }
+
    @include max320 {
       grid-column: 2 span;
       margin-top: 12px;
@@ -170,7 +184,7 @@
       grid-column: 7 span;
    }
 
-   @include max320 {
+   @include max444 {
       grid-column: 12 span;
    }
 }
@@ -197,14 +211,27 @@
    }
 
    @include max480 {
-      row-gap: 10px;
-      margin-top: 17px;
+      row-gap: 7px;
+      margin-top: 15px;
+   }
+
+   @include max444 {
+      row-gap: 8px;
+      justify-content: center;
+      margin-top: 10px;
+   }
+   @include max428 {
+      column-gap: 39px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+      flex-wrap: wrap;
    }
 
    @include max320 {
-      row-gap: 8px;
+      row-gap: 7px;
       justify-content: center;
-      margin-top: 12px;
+      margin-top: 15px;
    }
 }
 
@@ -216,7 +243,7 @@
 
    @include max1000 {
       flex: 0 0 247px;
-      padding: 17px 10px;
+      padding: 16px 10px;
    }
 
    @include max768 {
@@ -235,15 +262,15 @@
 
    @include max480 {
       flex: 0 0 140px;
-      padding: 11px 26.5px;
+      padding: 12px 26.5px;
       font-size: 8px;
       line-height: 0.75;
    }
 
-   @include max320 {
+   @include max444 {
       flex: 0 0 140px;
-      padding: 2px 12.5px;
-      font-size: 10px;
+      padding: 3px 10px;
+      font-size: 9px;
       line-height: 2.6;
    }
 }

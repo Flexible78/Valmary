@@ -18,7 +18,7 @@
    }
 
    @include max1000 {
-      padding: 12px 0 8.23px; //botom 19px
+      padding: 12px 0 8.23px;
    }
 
    @include max768 {
@@ -26,11 +26,11 @@
    }
 
    @include max480 {
-      padding: 12px 0 0;
+      padding: 12px 0 1px;
    }
 
    @include max320 {
-      padding: 9px 0 8.9px;
+      padding: 12px 0 6px;
    }
 }
 

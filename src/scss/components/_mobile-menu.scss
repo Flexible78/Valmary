@@ -34,11 +34,15 @@
          height: inherit;
          background-color: inherit;
       }
+
+      @include max480 {
+         height: 4px;
+      }
    }
 
    @include max480 {
       width: 30px;
-      height: 20px;
+      height: 19px;
       transform: translateX(3px);
    }
 
