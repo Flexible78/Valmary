@@ -25,32 +25,40 @@
 
    @include max1000 {
       top: -14px;
-      margin: 0 auto;
+      column-gap: 38px;
       max-width: 854px;
-      padding: 38px 3px 12px 8px;
+      margin: 0 auto;
+      padding: 38px 3px 34px 35px;
    }
 
    @include max768 {
+      top: 33px;
+      column-gap: 7px;
       max-width: 641px;
-      padding: 9px 0 20px;
+      padding: 0 0 10px 26px;
    }
 
    @include max480 {
+      top: -4px;
       max-width: 354px;
-      padding: 13px 0 19px;
+      padding: 6px 0 9px;
    }
 
    @include max320 {
+      top: -46px;
       display: flex;
       flex-direction: column;
-      row-gap: 20px;
+      row-gap: 9px;
       justify-content: flex-start;
       max-width: 180px;
-      padding: 13px 0 0 20px;
+      padding: 19px 0 14px 20px;
    }
 }
 
 .achievments-list__item {
+   @include max320 {
+   }
+
    grid-column: 3 span;
 }
 
@@ -59,6 +67,7 @@
 
    @include max1000 {
       max-width: 159px;
+      padding: 0;
    }
 
    @include max768 {
@@ -71,7 +80,9 @@
 
    @include max320 {
       display: flex;
-      column-gap: 21px;
+      column-gap: 25px;
+      align-items: flex-start;
+      max-width: 144px;
    }
 }
 
@@ -99,7 +110,7 @@
 
    @include max320 {
       font-size: 17px;
-      line-height: 2.65;
+      line-height: 1.88;
    }
 }
 
@@ -117,6 +128,7 @@
    }
 
    @include max768 {
+      margin-top: 0;
       font-size: 13px;
       line-height: 1.15;
    }
@@ -127,6 +139,7 @@
    }
 
    @include max320 {
+      margin-top: 4px;
       font-size: 8px;
       line-height: 1.25;
       text-align: left;
