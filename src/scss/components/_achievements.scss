@@ -1,24 +1,33 @@
 .achievments {
-   position: relative;
-   top: -21px;
-   box-shadow: -2px 2px 20px 0 rgb(66 66 66 / 15%);
-   background: var(--color-white);
-
    @include max768 {
       top: -31px;
    }
+
+   @include max480 {
+      top: -31px;
+   }
+
+   @include max480 {
+      top: -46px;
+   }
 }
 
-.achievments__container {
+.achievments-list {
+   position: relative;
+   top: -24px;
    display: grid;
    grid-template-columns: repeat(12, 1fr);
    column-gap: 20px;
    border-radius: 4px;
-   padding: 54px 0 53px;
+   padding: 51px 0 50px;
+   box-shadow: -2px 2px 20px 0 rgb(66 66 66 / 15%);
+   background: var(--color-white);
 
    @include max1000 {
+      top: -14px;
+      margin: 0 auto;
       max-width: 854px;
-      padding: 43px 3px 34px 20px;
+      padding: 38px 3px 12px 8px;
    }
 
    @include max768 {
@@ -34,16 +43,19 @@
    @include max320 {
       display: flex;
       flex-direction: column;
-      grid-column: 4 span;
+      row-gap: 20px;
+      justify-content: flex-start;
       max-width: 180px;
-      padding: 23px 0 22px;
+      padding: 13px 0 0 20px;
    }
 }
 
-.achievments__card {
-   justify-self: center;
+.achievments-list__item {
    grid-column: 3 span;
-   max-width: 196px;
+}
+
+.achievments-list__card {
+   padding: 0 40px;
 
    @include max1000 {
       max-width: 159px;
@@ -56,9 +68,9 @@
    @include max480 {
       max-width: 70px;
    }
+
    @include max320 {
       display: flex;
-      flood-color: row;
       column-gap: 21px;
    }
 }
@@ -117,5 +129,6 @@
    @include max320 {
       font-size: 8px;
       line-height: 1.25;
+      text-align: left;
    }
 }

@@ -1,5 +1,5 @@
 .hero {
-   padding: 104px 0 138px;
+   padding: 104px 0 142px;
    background-image: url("@img/home-page-hero-bgi.png");
    background-position: bottom -15% right 12.14%;
    background-size: 681px 556px;
@@ -220,12 +220,13 @@
       justify-content: center;
       margin-top: 10px;
    }
+
    @include max428 {
-      column-gap: 39px;
-      justify-content: center;
-      align-items: center;
-      margin-top: 15px;
       flex-wrap: wrap;
+      column-gap: 39px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 15px;
    }
 
    @include max320 {
